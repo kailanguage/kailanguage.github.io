@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  
+    <meta name="description" content="this is a show about my code life">
+  
+
+  
+    <meta name="keywords" content="hexo-blog">
+  
+
+  
+    <meta name="author" content="kailanguage">
+  
+
+  
+
+  
+
+  <title>自黑 | kailanguage</title>
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="container">
+    <!-- header -->
+<header class="header">
+  <div class="header-container ">
+    <nav class="header-navbar">
+      <div class="header-navbar-left">
+        <h1 class="header-navbar-logo">
+          <a href="/">
+            
+              kailanguage
+            
+          </a>
+        </h1>
+      </div>
+      <div class="header-navbar-right">
+        <div class="header-navbar-btn">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <ul class="header-navbar-list">
+          
+            <li class="header-navbar-item"><a href="/">首页</a></li>
+          
+            <li class="header-navbar-item"><a href="/categories">分类</a></li>
+          
+            <li class="header-navbar-item"><a href="/tags">标签</a></li>
+          
+            <li class="header-navbar-item"><a href="/link">友链</a></li>
+          
+            <li class="header-navbar-item"><a href="/messages">留言</a></li>
+          
+            <li class="header-navbar-item"><a href="/about">关于</a></li>
+          
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+    <section id="main"><!-- 文章详情页 -->
+
+<!-- banner container -->
+<div class="banner-container" style="background-image: url(/img/security.jpg)">
+  <div class="banner-inner">
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+      <h1 class="header-title"><a href="/2018/08/12/2018-08-12-hack/">自黑</a></h1>
+      <h2 class="header-subtitle">
+        
+          <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
+          <!--
+          
+  <a href="javascript:;" class="article-date">
+    <time datetime="2018-08-12T08:40:45.000Z" itemprop="datePublished">2018-08-12 04:40:45</time>
+  </a>
+
+          -->
+        
+      </h2>
+    
+
+    
+    
+  </div>
+</div>
+
+<!-- 文章内容 -->
+
+<div class="body-container">
+  <article id="article-content" class="main-container article-content zoom">
+    
+    
+
+    <div class="article-entry">
+      <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p><strong>事先声明：本篇仅供学习交流，不得用作任何非法犯罪用途！！！</strong></p>
+<blockquote>
+<p>本篇主要讲诉如何获取保存在浏览器的账号密码。我们都知道几乎所有的浏览器都有记录密码的功能，这确实很方便。（部分浏览器比如360不支持已保存的密码查看，而firefox、Google浏览器是支持密码查看的）但是不知你有没有遇到过你保存账号密码只有登录浏览器或者只能在那个浏览器上帮你填写账号密码，如果你在其他的平台上需要登录这又得找回密码了。接下来我讲诉如何从浏览器中提取你的账号密码以及如果保存的网站无法访问又如何获取密码的问题。</p>
+</blockquote>
+<hr>
+<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>① 预备知识：密码类型password<br><br>我们都知道密码输入框都喜欢将输入的变成“ * ”这是因为输入的数据类型为password类型,而账号是显现的，则是因为账号为txt类型，我们查看一些网页的源代码就知道了</p>
+<blockquote>
+<p>在浏览器界面右键点击审查元素即可查看网页源代码，或者按F12即可</p>
+</blockquote>
+<p><br><br><img src="/images/posts/tip/password.png" height="200" width="560"></p>
+<blockquote>
+<p>将password改成txt即可将密码显现出来</p>
+</blockquote>
+<p><br><br><img src="/images/posts/tip/txt.png" height="200" width="560"></p>
+<p><del>然而这跟标题有什么关系</del></p>
+<p><strong>②如果，万一那个网站由于各种原因无法访问，而你又想知道密码怎么办?</strong></p>
+<blockquote>
+<p>接下来你将了解到:</p>
+</blockquote>
+<ul>
+<li>在windows上使用IIS搭建简单的网页登陆界面<br><br></li>
+<li>修改hosts重定向到你搭建的登陆界面，进而将浏览器保存的密码捕获</li>
+<li>按照前面修改网页代码让密码显现出来</li>
+</ul>
+<h6 id="IIS搭建网站"><a href="#IIS搭建网站" class="headerlink" title="IIS搭建网站"></a>IIS搭建网站</h6><ul>
+<li><p>在程序功能里启动或关闭Windowns功能<br><br><br><img src="/images/posts/tip/IIS.png" height="200" width="500"></p>
+</li>
+<li><p>然后借助IIS搭建本地服务器<br><br><br><img src="/images/posts/tip/site01.png" height="200" width="500"></p>
+</li>
+<li><p>详细建站请自行百度。此类服务器仅供同一局域网访问，要想外网访问，需要采用第三方（诸如花生壳）提供端口映射。</p>
+<blockquote>
+<p>HTTP（超文本传输协议）默认端口是80端口，此端口ISP（互联网服务提供商）一般会封杀，此端口建站需要备案，请自行选择其他端口（比如8080、8008）如果你建设的网站仅仅是局域网内使用请不要在意这些。</p>
+</blockquote>
+<p>######修改hosts使网站重定向</p>
+</li>
+<li><p>在此目录下修改hosts文件</p>
+<blockquote>
+<p>C:\Windows\System32\drivers\etc</p>
+</blockquote>
+</li>
+<li><p>然后你搭建的网站ip在前，你要重定向的域名后，请用空格隔开<br><br><br><img src="/images/posts/tip/hosts.png" height="200" width="500"></p>
+<blockquote>
+<p>域名解析：将域名（比如<a href="http://www.baidu.com）解析成ip地址。解析优先级本地hosts&gt;系统设置的或者或者局域网提供的dns服务器" target="_blank" rel="noopener">www.baidu.com）解析成ip地址。解析优先级本地hosts&gt;系统设置的或者或者局域网提供的dns服务器</a></p>
+</blockquote>
+</li>
+<li><p>最后打开浏览器访问，浏览器会自动将密码填充，然后按照之前的方法获取密码。当然你也可以修改你搭建的网站代码将输入的保存成文件。<br><br><br><img src="/images/posts/tip/site02.png" height="200" width="500"></p>
+</li>
+</ul>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>再次重申：这仅是我解决生活中遇到的问题的奇思妙想，切记用于非法行为，仅供学习交流。</p>
+<hr>
+<p>转载请注明：<a href="https://kailanguage.github.io">kailanguage的博客</a>  </p>
+
+    </div>
+
+    <div class="article-footer">
+      <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技巧/">#技巧</a></li></ul>
+    </div>
+
+    <div class="article-navs">
+      
+<nav class="card-container card-article-nav">
+  <div class="card-wrap">
+    
+      <div class="card-item img">
+        <article>
+          
+            <div class="card-cover" style="background-image: url(/img/linux.jpg)"></div>
+          
+          <a class="card-link article-nav-link" href="/2018/08/20/2018-08-20-kali/"></a>
+          <div class="article-nav-caption">Newer</div>
+          <div class="article-nav-title">kali linux</div>
+        </article>
+      </div>
+    
+    
+      <div class="card-item img">
+        <article>
+          
+            <div class="card-cover" style="background-image: url(/img/markdown.jpg)"></div>
+          
+          <a class="card-link article-nav-link" href="/2018/07/01/2018-06-31-markdown/"></a>
+          <div class="article-nav-caption">Older</div>
+          <div class="article-nav-title">markdown语法</div>
+        </article>
+      </div>
+    
+  </div>
+</nav>
+
+    </div>
+    
+    
+  <div id="comment-container" class="comment-container"></div>
+
+  </article>
+</div></section>
+
+    <!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+
+    <p>&copy; 2019 <a href="/" target="_blank">kailanguage</a></p>
+    
+      <p id="hitokoto"></p>
+      <script src="https://v1.hitokoto.cn/?c=f&amp;encode=js&select=%23hitokoto" defer></script>
+    
+
+    
+
+    <p>小站已存活
+      <span id="run-time">
+        <script>
+          function show_date_time () {
+            window.setTimeout(function () {show_date_time();}, 1000);
+            var BirthDay = new Date(2018,5,28,12,30,00);
+            var today = new Date();
+            var timeold = (today.getTime() - BirthDay.getTime());
+            var msPerDay = 24 * 60 * 60 * 1000;
+            var e_daysold = timeold / msPerDay;
+            var daysold = Math.floor(e_daysold);
+            var e_hrsold = (e_daysold - daysold) * 24;
+            var hrsold = Math.floor(e_hrsold);
+            var e_minsold = (e_hrsold - hrsold) * 60;
+            var minsold = Math.floor((e_hrsold - hrsold) * 60);
+            var seconds = Math.floor((e_minsold - minsold) * 60);
+            document.getElementById("run-time").innerHTML = daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
+          }
+          show_date_time ();
+        </script>
+        </span>
+    </p>
+
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="/" target="_blank">flex-block</a></p>
+  </div>
+</footer>
+
+  </div>
+
+  
+  <!-- 尾部其他内容 -->
+
+<!-- analytics -->
+
+
+
+
+
+
+
+  
+  
+<!-- valine 评论 -->
+<script type="text/javascript" src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript">
+  new Valine({
+    el: "#comment-container",
+    appId: "W5DdeF4EsnWOQ9FYQFhN9b0b-gzGzoHsz",
+    appKey: "3KQoej9WviAEUhpcQTfSj6w3",
+    avatar: "mm",
+    placeholder: "随便说点什么叭～",
+    notify: false,
+    visitor: false,
+    pageSize: 10,
+  });
+</script>
+
+
+
+<!-- dplayer 视频 -->
+<link rel="stylesheet" href="/lib/DPlayer.min.css">
+<script src="/lib/DPlayer.min.js"></script>
+<script type="text/javascript">
+  const dplayer = document.querySelectorAll(".dplayer");
+  dplayer && initDPlayer(dplayer);
+  function initDPlayer(els) {
+    let elsArr = Array.from(els);
+    elsArr.forEach(el => {
+      let url = el.dataset.url;
+      let cover = el.dataset.cover;
+      new DPlayer({
+        container: el,
+        video: { url: url, pic: cover },
+        theme: "#b7daff",
+        autoplay: false,
+        loop: false,
+        mutex: true,
+      });
+    });
+  }
+</script>
+
+
+<!-- 瀑布流 -->
+<script src="/lib/macy.js"></script>
+<script type="text/javascript">
+
+if (document.querySelector(".waterfall-container")) {
+  initCss()
+  initMacy(".waterfall-container")
+}
+
+function initMacy(selector) {
+  new Macy({
+    container: selector,
+    trueOrder: false,
+    waitForImages: false,
+    useOwnImageLoader: false,
+    mobileFirst: true,
+    columns: 1,
+    margin: {
+      y: 16,
+      x: '2%',
+    },
+    breakAt: {
+      1200: {
+        margin: {
+          x: 20
+        },
+        columns: 4
+      },
+      940: {
+        margin: {
+          x: 20
+        },
+        columns: 3
+      },
+      520: {
+        margin: {
+          x: 10
+        },
+        columns: 2
+      },
+      400: {
+        margin: {
+          x: 0
+        },
+        columns: 1
+      },
+    }
+  });
+}
+
+function initCss() {
+  let cssStyle = document.createElement("style")
+  cssStyle.innerText = `.waterfall-container p { display: block; border-radius: 4px; overflow: hidden; margin: 0; }`
+  document.head.appendChild(cssStyle);
+}
+</script>
+
+
+<!-- 图片预览 -->
+<script src="/lib/zoom.min.js"></script>
+<script>
+  document.querySelector(".zoom") && zoom(".zoom", {
+    margin: 15,
+    padding: 15,
+    radius: 5,
+    specify: "",
+    filter: "gallery",
+  });
+</script>
+
+
+<script src="/js/script.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/01/assets/haru01.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+</html>

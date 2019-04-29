@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  
+    <meta name="description" content="this is a show about my code life">
+  
+
+  
+    <meta name="keywords" content="hexo-blog">
+  
+
+  
+    <meta name="author" content="kailanguage">
+  
+
+  
+
+  
+
+  <title>GFW vs IPv6 | kailanguage</title>
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="container">
+    <!-- header -->
+<header class="header">
+  <div class="header-container ">
+    <nav class="header-navbar">
+      <div class="header-navbar-left">
+        <h1 class="header-navbar-logo">
+          <a href="/">
+            
+              kailanguage
+            
+          </a>
+        </h1>
+      </div>
+      <div class="header-navbar-right">
+        <div class="header-navbar-btn">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <ul class="header-navbar-list">
+          
+            <li class="header-navbar-item"><a href="/">首页</a></li>
+          
+            <li class="header-navbar-item"><a href="/categories">分类</a></li>
+          
+            <li class="header-navbar-item"><a href="/tags">标签</a></li>
+          
+            <li class="header-navbar-item"><a href="/link">友链</a></li>
+          
+            <li class="header-navbar-item"><a href="/messages">留言</a></li>
+          
+            <li class="header-navbar-item"><a href="/about">关于</a></li>
+          
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+    <section id="main"><!-- 文章详情页 -->
+
+<!-- banner container -->
+<div class="banner-container" style="background-image: url(/img/internet.jpg)">
+  <div class="banner-inner">
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+      <h1 class="header-title"><a href="/2018/11/12/2018-11-12-ipv6/">GFW vs IPv6</a></h1>
+      <h2 class="header-subtitle">
+        
+          
+          <!--
+          
+  <a href="javascript:;" class="article-date">
+    <time datetime="2018-11-12T11:00:30.000Z" itemprop="datePublished">2018-11-12 07:00:30</time>
+  </a>
+
+          -->
+        
+      </h2>
+    
+
+    
+    
+  </div>
+</div>
+
+<!-- 文章内容 -->
+
+<div class="body-container">
+  <article id="article-content" class="main-container article-content zoom">
+    
+    
+
+    <div class="article-entry">
+      <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>GFW（great fire wall，长城防火墙）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">主要技术</span><br><span class="line">1 域名解析服务缓存污染</span><br><span class="line">2 针对境外的IP地址封锁</span><br><span class="line">3 IP地址特定端口封锁</span><br><span class="line">4 无状态TCP连接重置</span><br><span class="line">5 对加密连接的干扰</span><br><span class="line">6 TCP关键字阻断</span><br><span class="line">7 CA证书检测</span><br><span class="line">8 对破网软件的反制</span><br><span class="line">9 间歇性完全封锁</span><br><span class="line">    9.1   间歇性封锁国际出口</span><br><span class="line">    9.2   境内骨干路由器间歇性阻断</span><br><span class="line">10    深度包检测</span><br><span class="line">11    针对IPv6协议的审查</span><br><span class="line">12    对电子邮件通讯的拦截</span><br></pre></td></tr></table></figure></p>
+<p>了解更多请移步维基百科<br><br><br>IPv6:下一代ip协议。<br>在学校里有幸使用到了教育网提供的IPv6和IPv4共存的网络服务。<br>（关于IPv4和IPv6及计算机网络通信请自行查阅资料了解）<br><br></p>
+<p>最近，我在对我本地的网站进行IPv6的适配，好吧，IPv6挺让人失望的.我认为可以跳出局域网的局限性，使用IPv6可以定位到个人的电脑，就像拥有一个独立的私有的互联网上可访问的IPv4地址一样，结果不尽人意。</p>
+<p>有可能是出口BGP的限制，或者链路上的某路由器把目标数据包丢弃了。使用某网站进行ip查询，是可以定位到学校的，然后进行了ping测试，结果掉包100%</p>
+<p><img src="/images/IPv6/2.png" height="365" width="766"></p>
+<hr>
+<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>命令行输入<br>windowns</p>
+<blockquote>
+<p>ipconfig /all</p>
+</blockquote>
+<p>linux</p>
+<blockquote>
+<p>ifconfig</p>
+</blockquote>
+<p><img src="/images/IPv6/1.png" width="745" height="305"></p>
+<p>即可查看ip信息</p>
+<p>GWF到底跟IPv6到底有怎样的摩擦呢？</p>
+<p>用了这么久的校园网，今天我进行了一下的测试，无线有线都可以尝试。</p>
+<blockquote>
+<p>①选择连接的网络适配器，取消IPv4的勾选，保留IPv6，然后进行Dr.COM拨号，结果拨号失败，无法从服务器获取ip地址（ipv4的地址）</p>
+</blockquote>
+<blockquote>
+<p>②取消IPv6的勾选，保留Ipv4，然后进行拨号，结果可以正常上网。</p>
+</blockquote>
+<blockquote>
+<p>③保留IPv4和IPv6，然后拨号上网</p>
+</blockquote>
+<blockquote>
+<p>第一种情况无法上网，第二种情况可以上网，但是无法使用google搜索等国外的服务，第三种可以上网，并可以访问一些被墙的网站，比如YouTube，Google等，不过仅是一小部分可访问，像Facebook则无法访问。</p>
+</blockquote>
+<hr>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>原本我以为教育网较普通大众是开放程度高的，没想到是因为部分教育网部署了IPv6与IPv4共存的设备，结果导致了原本被墙的网站通过IPv6来通信，出现了不完全翻墙的现象。又或者是GFW是故意在教育网上放行IPv6通信关于一些用于获取学术类的网站，谁又知道其中真正的缘由呢，想知道的只好自己去验证了。</p>
+
+    </div>
+
+    <div class="article-footer">
+      <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/计算机网络/">#计算机网络</a></li></ul>
+    </div>
+
+    <div class="article-navs">
+      
+<nav class="card-container card-article-nav">
+  <div class="card-wrap">
+    
+      <div class="card-item img">
+        <article>
+          
+            <div class="card-cover" style="background-image: url(/img/hexo.jpg)"></div>
+          
+          <a class="card-link article-nav-link" href="/2019/04/27/hello-world/"></a>
+          <div class="article-nav-caption">Newer</div>
+          <div class="article-nav-title">Hello World</div>
+        </article>
+      </div>
+    
+    
+      <div class="card-item img">
+        <article>
+          
+            <div class="card-cover" style="background-image: url(/img/Java.jpg)"></div>
+          
+          <a class="card-link article-nav-link" href="/2018/11/11/2018-11-1-java-out/"></a>
+          <div class="article-nav-caption">Older</div>
+          <div class="article-nav-title">Java格式化输出</div>
+        </article>
+      </div>
+    
+  </div>
+</nav>
+
+    </div>
+    
+    
+  <div id="comment-container" class="comment-container"></div>
+
+  </article>
+</div></section>
+
+    <!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+
+    <p>&copy; 2019 <a href="/" target="_blank">kailanguage</a></p>
+    
+      <p id="hitokoto"></p>
+      <script src="https://v1.hitokoto.cn/?c=f&amp;encode=js&select=%23hitokoto" defer></script>
+    
+
+    
+
+    <p>小站已存活
+      <span id="run-time">
+        <script>
+          function show_date_time () {
+            window.setTimeout(function () {show_date_time();}, 1000);
+            var BirthDay = new Date(2018,5,28,12,30,00);
+            var today = new Date();
+            var timeold = (today.getTime() - BirthDay.getTime());
+            var msPerDay = 24 * 60 * 60 * 1000;
+            var e_daysold = timeold / msPerDay;
+            var daysold = Math.floor(e_daysold);
+            var e_hrsold = (e_daysold - daysold) * 24;
+            var hrsold = Math.floor(e_hrsold);
+            var e_minsold = (e_hrsold - hrsold) * 60;
+            var minsold = Math.floor((e_hrsold - hrsold) * 60);
+            var seconds = Math.floor((e_minsold - minsold) * 60);
+            document.getElementById("run-time").innerHTML = daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
+          }
+          show_date_time ();
+        </script>
+        </span>
+    </p>
+
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="/" target="_blank">flex-block</a></p>
+  </div>
+</footer>
+
+  </div>
+
+  
+  <!-- 尾部其他内容 -->
+
+<!-- analytics -->
+
+
+
+
+
+
+
+  
+  
+<!-- valine 评论 -->
+<script type="text/javascript" src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript">
+  new Valine({
+    el: "#comment-container",
+    appId: "W5DdeF4EsnWOQ9FYQFhN9b0b-gzGzoHsz",
+    appKey: "3KQoej9WviAEUhpcQTfSj6w3",
+    avatar: "mm",
+    placeholder: "随便说点什么叭～",
+    notify: false,
+    visitor: false,
+    pageSize: 10,
+  });
+</script>
+
+
+
+<!-- dplayer 视频 -->
+<link rel="stylesheet" href="/lib/DPlayer.min.css">
+<script src="/lib/DPlayer.min.js"></script>
+<script type="text/javascript">
+  const dplayer = document.querySelectorAll(".dplayer");
+  dplayer && initDPlayer(dplayer);
+  function initDPlayer(els) {
+    let elsArr = Array.from(els);
+    elsArr.forEach(el => {
+      let url = el.dataset.url;
+      let cover = el.dataset.cover;
+      new DPlayer({
+        container: el,
+        video: { url: url, pic: cover },
+        theme: "#b7daff",
+        autoplay: false,
+        loop: false,
+        mutex: true,
+      });
+    });
+  }
+</script>
+
+
+<!-- 瀑布流 -->
+<script src="/lib/macy.js"></script>
+<script type="text/javascript">
+
+if (document.querySelector(".waterfall-container")) {
+  initCss()
+  initMacy(".waterfall-container")
+}
+
+function initMacy(selector) {
+  new Macy({
+    container: selector,
+    trueOrder: false,
+    waitForImages: false,
+    useOwnImageLoader: false,
+    mobileFirst: true,
+    columns: 1,
+    margin: {
+      y: 16,
+      x: '2%',
+    },
+    breakAt: {
+      1200: {
+        margin: {
+          x: 20
+        },
+        columns: 4
+      },
+      940: {
+        margin: {
+          x: 20
+        },
+        columns: 3
+      },
+      520: {
+        margin: {
+          x: 10
+        },
+        columns: 2
+      },
+      400: {
+        margin: {
+          x: 0
+        },
+        columns: 1
+      },
+    }
+  });
+}
+
+function initCss() {
+  let cssStyle = document.createElement("style")
+  cssStyle.innerText = `.waterfall-container p { display: block; border-radius: 4px; overflow: hidden; margin: 0; }`
+  document.head.appendChild(cssStyle);
+}
+</script>
+
+
+<!-- 图片预览 -->
+<script src="/lib/zoom.min.js"></script>
+<script>
+  document.querySelector(".zoom") && zoom(".zoom", {
+    margin: 15,
+    padding: 15,
+    radius: 5,
+    specify: "",
+    filter: "gallery",
+  });
+</script>
+
+
+<script src="/js/script.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/01/assets/haru01.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+</html>
