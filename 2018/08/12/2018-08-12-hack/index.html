@@ -125,7 +125,7 @@
     
 
     <div class="article-entry">
-      <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p><strong>事先声明：本篇仅供学习交流，不得用作任何非法犯罪用途！！！</strong></p>
+      <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>如果网站之前有保存密码，但是网站又崩了，又想知道密码，于是发生了这样奇葩的事</p>
 <blockquote>
 <p>本篇主要讲诉如何获取保存在浏览器的账号密码。我们都知道几乎所有的浏览器都有记录密码的功能，这确实很方便。（部分浏览器比如360不支持已保存的密码查看，而firefox、Google浏览器是支持密码查看的）但是不知你有没有遇到过你保存账号密码只有登录浏览器或者只能在那个浏览器上帮你填写账号密码，如果你在其他的平台上需要登录这又得找回密码了。接下来我讲诉如何从浏览器中提取你的账号密码以及如果保存的网站无法访问又如何获取密码的问题。</p>
 </blockquote>
@@ -134,11 +134,9 @@
 <blockquote>
 <p>在浏览器界面右键点击审查元素即可查看网页源代码，或者按F12即可</p>
 </blockquote>
-<p><br><br><img src="/images/posts/tip/password.png" height="200" width="560"></p>
 <blockquote>
 <p>将password改成txt即可将密码显现出来</p>
 </blockquote>
-<p><br><br><img src="/images/posts/tip/txt.png" height="200" width="560"></p>
 <p><del>然而这跟标题有什么关系</del></p>
 <p><strong>②如果，万一那个网站由于各种原因无法访问，而你又想知道密码怎么办?</strong></p>
 <blockquote>
@@ -150,32 +148,32 @@
 <li>按照前面修改网页代码让密码显现出来</li>
 </ul>
 <h6 id="IIS搭建网站"><a href="#IIS搭建网站" class="headerlink" title="IIS搭建网站"></a>IIS搭建网站</h6><ul>
-<li><p>在程序功能里启动或关闭Windowns功能<br><br><br><img src="/images/posts/tip/IIS.png" height="200" width="500"></p>
-</li>
-<li><p>然后借助IIS搭建本地服务器<br><br><br><img src="/images/posts/tip/site01.png" height="200" width="500"></p>
-</li>
-<li><p>详细建站请自行百度。此类服务器仅供同一局域网访问，要想外网访问，需要采用第三方（诸如花生壳）提供端口映射。</p>
-<blockquote>
+<li>在程序功能里启动或关闭Windowns功能</li>
+</ul>
+<ul>
+<li>然后借助IIS搭建本地服务器</li>
+</ul>
+<ul>
+<li>详细建站请自行百度。此类服务器仅供同一局域网访问，要想外网访问，需要采用第三方（诸如花生壳）提供端口映射。<blockquote>
 <p>HTTP（超文本传输协议）默认端口是80端口，此端口ISP（互联网服务提供商）一般会封杀，此端口建站需要备案，请自行选择其他端口（比如8080、8008）如果你建设的网站仅仅是局域网内使用请不要在意这些。</p>
 </blockquote>
-<p>######修改hosts使网站重定向</p>
-</li>
+######修改hosts使网站重定向</li>
 <li><p>在此目录下修改hosts文件</p>
 <blockquote>
 <p>C:\Windows\System32\drivers\etc</p>
 </blockquote>
 </li>
-<li><p>然后你搭建的网站ip在前，你要重定向的域名后，请用空格隔开<br><br><br><img src="/images/posts/tip/hosts.png" height="200" width="500"></p>
+<li><p>然后你搭建的网站ip在前，你要重定向的域名后，请用空格隔开</p>
+</li>
+</ul>
 <blockquote>
 <p>域名解析：将域名（比如<a href="http://www.baidu.com）解析成ip地址。解析优先级本地hosts&gt;系统设置的或者或者局域网提供的dns服务器" target="_blank" rel="noopener">www.baidu.com）解析成ip地址。解析优先级本地hosts&gt;系统设置的或者或者局域网提供的dns服务器</a></p>
 </blockquote>
-</li>
-<li><p>最后打开浏览器访问，浏览器会自动将密码填充，然后按照之前的方法获取密码。当然你也可以修改你搭建的网站代码将输入的保存成文件。<br><br><br><img src="/images/posts/tip/site02.png" height="200" width="500"></p>
-</li>
+<ul>
+<li>最后打开浏览器访问，浏览器会自动将密码填充，然后按照之前的方法获取密码。当然你也可以修改你搭建的网站代码将输入的保存成文件。</li>
 </ul>
-<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>再次重申：这仅是我解决生活中遇到的问题的奇思妙想，切记用于非法行为，仅供学习交流。</p>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>想看已保存的密码，当然只针对那些不能查看密码的浏览器，将代码中对应的密码type改为txt即可</p>
 <hr>
-<p>转载请注明：<a href="https://kailanguage.github.io">kailanguage的博客</a>  </p>
 
     </div>
 
@@ -191,11 +189,11 @@
       <div class="card-item img">
         <article>
           
-            <div class="card-cover" style="background-image: url(/img/linux.jpg)"></div>
+            <div class="card-cover" style="background-image: url(/img/wordpress.jpg)"></div>
           
-          <a class="card-link article-nav-link" href="/2018/08/20/2018-08-20-kali/"></a>
+          <a class="card-link article-nav-link" href="/2018/09/10/2018-9-10-wordpress/"></a>
           <div class="article-nav-caption">Newer</div>
-          <div class="article-nav-title">kali linux</div>
+          <div class="article-nav-title">wordpress 搭建交互式网站</div>
         </article>
       </div>
     
@@ -229,7 +227,7 @@
     <p>&copy; 2019 <a href="/" target="_blank">kailanguage</a></p>
     
       <p id="hitokoto"></p>
-      <script src="https://v1.hitokoto.cn/?c=f&amp;encode=js&select=%23hitokoto" defer></script>
+      <script src="https://v1.hitokoto.cn/?c=a&amp;encode=js&select=%23hitokoto" defer></script>
     
 
     
