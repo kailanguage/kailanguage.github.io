@@ -21,7 +21,7 @@
 
   
 
-  <title>GFW vs IPv6 | kailanguage</title>
+  <title>vim笔记 | kailanguage</title>
 
   
 
@@ -79,7 +79,7 @@
     <section id="main"><!-- 文章详情页 -->
 
 <!-- banner container -->
-<div class="banner-container" style="background-image: url(/img/internet.jpg)">
+<div class="banner-container" style="background-image: url(/img/vim.jpg)">
   <div class="banner-inner">
 
     
@@ -97,14 +97,14 @@
 
     
     
-      <h1 class="header-title"><a href="/2018/11/12/2018-11-12-ipv6/">GFW vs IPv6</a></h1>
+      <h1 class="header-title"><a href="/2019/04/20/vim/">vim笔记</a></h1>
       <h2 class="header-subtitle">
         
-          
+          <a class="article-category-link" href="/categories/笔记/">笔记</a>
           <!--
           
   <a href="javascript:;" class="article-date">
-    <time datetime="2018-11-12T11:00:30.000Z" itemprop="datePublished">2018-11-12 07:00:30</time>
+    <time datetime="2019-04-20T13:21:52.000Z" itemprop="datePublished">2019-04-20 09:21:52</time>
   </a>
 
           -->
@@ -125,41 +125,12 @@
     
 
     <div class="article-entry">
-      <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>GFW（great fire wall）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">主要技术</span><br><span class="line">1 域名解析服务缓存污染</span><br><span class="line">2 针对境外的IP地址封锁</span><br><span class="line">3 IP地址特定端口封锁</span><br><span class="line">4 无状态TCP连接重置</span><br><span class="line">5 对加密连接的干扰</span><br><span class="line">6 TCP关键字阻断</span><br><span class="line">7 CA证书检测</span><br><span class="line">8 对破网软件的反制</span><br><span class="line">9 间歇性完全封锁</span><br><span class="line">    9.1   间歇性封锁国际出口</span><br><span class="line">    9.2   境内骨干路由器间歇性阻断</span><br><span class="line">10    深度包检测</span><br><span class="line">11    针对IPv6协议的审查</span><br><span class="line">12    对电子邮件通讯的拦截</span><br></pre></td></tr></table></figure></p>
-<p>了解更多请移步维基百科<br><br><br>IPv6:下一代ip协议。<br>在学校里有幸使用到了教育网提供的IPv6和IPv4共存的网络服务。<br>fe80开头的是链路本地地址<br><br></p>
-<p>最近，我在对我本地的网站进行IPv6的适配，好吧，IPv6挺让人失望的.我认为可以跳出局域网的局限性，使用IPv6可以定位到个人的电脑，就像拥有一个独立的私有的互联网上可访问的IPv4地址一样，结果不尽人意。</p>
-<p>有可能是出口BGP的限制，或者链路上的某路由器把目标数据包丢弃了。使用某网站进行ip查询，是可以定位到学校的，然后进行了ping测试，结果掉包100%</p>
-<hr>
-<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>命令行输入<br>windowns</p>
-<blockquote>
-<p>ipconfig /all</p>
-</blockquote>
-<p>linux</p>
-<blockquote>
-<p>ifconfig</p>
-</blockquote>
-<p>即可查看ip信息</p>
-<p>GWF到底跟IPv6到底有怎样的摩擦呢？</p>
-<p>用了这么久的校园网，今天我进行了一下的测试，无线有线都可以尝试。</p>
-<blockquote>
-<p>①选择连接的网络适配器，取消IPv4的勾选，保留IPv6，然后进行Dr.COM拨号，结果拨号失败，无法从服务器获取ip地址（ipv4的地址）</p>
-</blockquote>
-<blockquote>
-<p>②取消IPv6的勾选，保留Ipv4，然后进行拨号，结果可以正常上网。</p>
-</blockquote>
-<blockquote>
-<p>③保留IPv4和IPv6，然后拨号上网</p>
-</blockquote>
-<blockquote>
-<p>第一种情况无法上网，第二种情况可以上网，但是无法使用google搜索等国外的服务，第三种可以上网，并可以访问一些被墙的网站，比如YouTube，Google等，不过仅是一小部分可访问，像Facebook则无法访问。</p>
-</blockquote>
-<hr>
-<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>原本我以为教育网较普通大众是开放程度高的，没想到是因为部分教育网部署了IPv6与IPv4共存的设备，结果导致了原本被墙的网站通过IPv6来通信，出现了不完全翻墙的现象。又或者是GFW是故意在教育网上放行IPv6通信关于一些用于获取学术类的网站，谁又知道其中真正的缘由呢，想知道的只好自己去验证了。</p>
+      <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line">移动</span><br><span class="line">h（左）j（下）k（上）l（右）</span><br><span class="line"></span><br><span class="line">跳转</span><br><span class="line">^ 跳转到行首</span><br><span class="line">0 包含缩进空格</span><br><span class="line">$ 跳转到行尾</span><br><span class="line"></span><br><span class="line">w/W	正向跳转到下一个单词开头</span><br><span class="line">b/B 反向移动</span><br><span class="line">e/E 正向移动下一个单词的结尾</span><br><span class="line">ge 反向</span><br><span class="line"></span><br><span class="line">Ctrl+f/F 下一页</span><br><span class="line">Ctrl+b/B 上一页</span><br><span class="line">Ctrl+d/u 向下/上翻半页</span><br><span class="line">&lt;Line_number&gt;gg/G	跳到指定行</span><br><span class="line">gg  跳到第一行首</span><br><span class="line">G  跳到最后一行首</span><br><span class="line"></span><br><span class="line">缩进</span><br><span class="line">&gt;&gt; / :&gt;  右缩进</span><br><span class="line">m,n&gt; / :m,m+n-1&gt; m行开始共n行缩进一次</span><br><span class="line"></span><br><span class="line">剪切delete</span><br><span class="line">复制yank</span><br><span class="line">粘贴put</span><br><span class="line">撤销undo</span><br><span class="line">重做redo</span><br><span class="line">reg(ister)</span><br><span class="line">无名寄存器</span><br><span class="line">数字寄存器</span><br><span class="line">有名寄存器</span><br><span class="line">黑洞寄存器</span><br><span class="line"></span><br><span class="line">yw  复制当前光标单词</span><br><span class="line">y2w 复制正向两个单词</span><br><span class="line">yy 复制一行</span><br><span class="line">dd 剪切一行</span><br><span class="line">x/X  删除光标下/前单个字符</span><br><span class="line">dw 删除一个单词（必须在词首）</span><br><span class="line">d&#123;hjkl&#125;  删除左下上右一个操作前的字符</span><br><span class="line">d$=D  删除光标到行尾的字符</span><br><span class="line">d^  删除光标到行首的字符</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">组合操作</span><br><span class="line">[count]operation([count]&#123;motion&#125;)</span><br><span class="line">&#123;n&#125;dd  向下删除（剪切）n行</span><br><span class="line">5dw 删除正向单词5次</span><br><span class="line">3w  正向移动单词3次</span><br><span class="line">D3w  正向删除3w动作</span><br><span class="line">2d3w  正向删除3w动作 两次</span><br><span class="line"></span><br><span class="line">插入</span><br><span class="line">Shift+i/A 插入模式移动到行首/尾</span><br><span class="line">a/i  光标后/前插入</span><br><span class="line">[n]O/o  行前/后插入n次</span><br><span class="line">[n]+i 插入模式重复n次</span><br><span class="line"></span><br><span class="line">转换</span><br><span class="line">~  单个字符大小写转换</span><br><span class="line">g~w  单词大小写转换</span><br><span class="line">g~$/g~~  整行大小写转换</span><br><span class="line">gU/uw  单词转换成大/小写</span><br><span class="line"></span><br><span class="line">查找</span><br><span class="line">F/f&#123;char&#125;  反向/正向查找单个字符</span><br><span class="line">t&#123;char&#125;  查找字符前一个字符</span><br><span class="line">dt&#123;char&#125;/df&#123;space&#125;  删除光标到查找字符间字符</span><br><span class="line">/&#123;char&#125; 命令行查找</span><br><span class="line"></span><br><span class="line">替换substitute</span><br><span class="line">[range]s/&#123;patttern&#125;/&#123;string&#125;/[flags]</span><br><span class="line">s/going/rolling/g  当前行所有going替换成rolling</span><br><span class="line">%s/going/rolling/g  %匹配所有范围</span><br></pre></td></tr></table></figure>
 
     </div>
 
     <div class="article-footer">
-      <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/计算机网络/">#计算机网络</a></li></ul>
+      <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">#Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/">#vim</a></li></ul>
     </div>
 
     <div class="article-navs">
@@ -170,11 +141,11 @@
       <div class="card-item img">
         <article>
           
-            <div class="card-cover" style="background-image: url(/img/vim.jpg)"></div>
+            <div class="card-cover" style="background-image: url(/img/hexo.jpg)"></div>
           
-          <a class="card-link article-nav-link" href="/2019/04/20/vim/"></a>
+          <a class="card-link article-nav-link" href="/2019/04/27/hello-world/"></a>
           <div class="article-nav-caption">Newer</div>
-          <div class="article-nav-title">vim笔记</div>
+          <div class="article-nav-title">Hello World</div>
         </article>
       </div>
     
@@ -182,11 +153,11 @@
       <div class="card-item img">
         <article>
           
-            <div class="card-cover" style="background-image: url(/img/Java.jpg)"></div>
+            <div class="card-cover" style="background-image: url(/img/internet.jpg)"></div>
           
-          <a class="card-link article-nav-link" href="/2018/11/11/2018-11-1-java-out/"></a>
+          <a class="card-link article-nav-link" href="/2018/11/12/2018-11-12-ipv6/"></a>
           <div class="article-nav-caption">Older</div>
-          <div class="article-nav-title">Java格式化输出</div>
+          <div class="article-nav-title">GFW vs IPv6</div>
         </article>
       </div>
     
