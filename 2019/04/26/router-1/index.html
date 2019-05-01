@@ -21,7 +21,7 @@
 
   
 
-  <title>Hello World | kailanguage</title>
+  <title>路由器-刷固件 | kailanguage</title>
 
   
 
@@ -77,7 +77,7 @@
     <section id="main"><!-- 文章详情页 -->
 
 <!-- banner container -->
-<div class="banner-container" style="background-image: url(/img/hexo.jpg)">
+<div class="banner-container" style="background-image: url(/img/router.jpg)">
   <div class="banner-inner">
 
     
@@ -95,17 +95,10 @@
 
     
     
-      <h1 class="header-title"><a href="/2019/04/27/hello-world/">Hello World</a></h1>
+      <h1 class="header-title"><a href="/2019/04/26/router-1/">路由器-刷固件</a></h1>
       <h2 class="header-subtitle">
         
-          <a class="article-category-link" href="/categories/blog/">blog</a><a class="article-category-link" href="/categories/blog/hexo/">hexo</a>
-          <!--
-          
-  <a href="javascript:;" class="article-date">
-    <time datetime="2019-04-27T12:39:56.133Z" itemprop="datePublished">2019-04-27 08:39:56</time>
-  </a>
-
-          -->
+          电脑换系统、手机换系统、路由器也ok啦
         
       </h2>
     
@@ -123,20 +116,28 @@
     
 
     <div class="article-entry">
-      <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>路由器能否刷机，请自行百度</p>
+<p>可刷的第三方固件有梅林、Openwrt、DDWRT、Padavan。。。</p>
+<p>孰优孰劣，请自行测试</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>这里不讲刷机教程，照着网上的来，一般不会翻车！</p>
+<p>刷了第三方固件，我们均有root权限，大多为Linux系统，可玩性高</p>
+<p>第三方插件丰富</p>
+<p>我的路由器</p>
+<p>它已经成为一台：</p>
+<p><strong>1、FTP服务器（挂载了300G硬盘），连接校园网，所有机器均可访问，进行上传、下载服务</strong></p>
+<p><strong>2、S-S-R、v-p-n、http代理、dns。。。服务器，你懂的</strong></p>
+<p><strong>3、aria2、迅雷下载，将文件下载到路由器硬盘上</strong></p>
+<p><strong>5、Web服务器，集成了网站开发环境</strong></p>
+<p><strong>6、内网穿透，使用了Ngrok映射了ssh。后来由于同学的小程序需求，(教务系统限制外网访问and学校v-p-n崩了)，之后我在此路由器上使用了FRP反向代理，为其服务器提供内网访问、负载均衡什么的</strong></p>
+<p><strong>7、ssh、信道更改、ipv6、drcom拨号、广告屏蔽、linux脚本什么的你应该懂得吧</strong></p>
+<p>如下图</p>
+<p><del>配置：超频1.4GHz CPU+512M RAM+64M FLASH = 游戏上分无敌？？</del></p>
+<p><img src="/img/post/router/padavan.png" alt></p>
 
     </div>
 
     <div class="article-footer">
-      <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">#blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">#hexo</a></li></ul>
+      <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/路由器/">#路由器</a></li></ul>
     </div>
 
     <div class="article-navs">
@@ -148,11 +149,11 @@
       <div class="card-item img">
         <article>
           
-            <div class="card-cover" style="background-image: url(/img/linux.jpg)"></div>
+            <div class="card-cover" style="background-image: url(/img/sql.jpg)"></div>
           
-          <a class="card-link article-nav-link" href="/2019/04/21/linux-homework3/"></a>
+          <a class="card-link article-nav-link" href="/2019/04/23/sql-study/"></a>
           <div class="article-nav-caption">Older</div>
-          <div class="article-nav-title">linux_homework3</div>
+          <div class="article-nav-title">SQL</div>
         </article>
       </div>
     
