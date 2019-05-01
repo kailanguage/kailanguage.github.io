@@ -21,7 +21,7 @@
 
   
 
-  <title>Archives | kailanguage</title>
+  <title>路由器-刷固件 | kailanguage</title>
 
   
 
@@ -74,10 +74,10 @@
   </div>
 </header>
 
-    <section id="main"><!-- 文章归档 -->
+    <section id="main"><!-- 文章详情页 -->
 
 <!-- banner container -->
-<div class="banner-container" style="background-image: url(/css/images/yourname.png)">
+<div class="banner-container" style="background-image: url(/img/router.jpg)">
   <div class="banner-inner">
 
     
@@ -85,9 +85,6 @@
 
     
     
-      <h1 class="header-title"><a href="/archives/2018/09/">归档</a></h1>
-      <h2 class="header-subtitle">共有13篇文章</h2>
-    
 
     
     
@@ -97,6 +94,13 @@
     
 
     
+    
+      <h1 class="header-title"><a href="/2019/03/16/router-1/">路由器-刷固件</a></h1>
+      <h2 class="header-subtitle">
+        
+          电脑换系统、手机换系统、路由器也ok啦
+        
+      </h2>
     
 
     
@@ -104,45 +108,76 @@
   </div>
 </div>
 
-<!-- post list container -->
+<!-- 文章内容 -->
+
 <div class="body-container">
-  <div class="main-container article-list">
-    <div class="card-container card-articles">
-      <div class="card-wrap">
-        
-          
-          <div class="card-item img">
-            <article>
-              
-                <div class="card-cover" style="background-image: url(/img/wordpress.jpg)"></div>
-              
-              
-                <a class="article-link" href="/2018/09/10/2018-9-10-wordpress/" itemprop="url"></a>
-              
-              <h2 class="article-title">wordpress 搭建交互式网站</h2>
-              <div class="article-meta">
-                <strong>kailanguage</strong>
-                <span>发布于</span>
-                
-  <a href="/2018/09/10/2018-9-10-wordpress/" class="article-date">
-    <time datetime="2018-09-10T12:40:45.000Z" itemprop="datePublished">2018-09-10</time>
-  </a>
+  <article id="article-content" class="main-container article-content zoom">
+    
+    
 
-              </div>
-              <div class="article-category">
-                <a class="article-category-link" href="/categories/计算机/">计算机</a>
-              </div>
-            </article>
-          </div>
-        
-      </div>
+    <div class="article-entry">
+      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>路由器能否刷机，请自行百度</p>
+<p>可刷的第三方固件有梅林、Openwrt、DDWRT、Padavan。。。</p>
+<p>孰优孰劣，请自行测试</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>这里不讲刷机教程，照着网上的来，一般不会翻车！</p>
+<p>刷了第三方固件，我们均有root权限，大多为Linux系统，可玩性高</p>
+<p>第三方插件丰富</p>
+<p>我的路由器</p>
+<p>它已经成为一台：</p>
+<p><strong>1、FTP服务器（挂载了300G硬盘），连接校园网，所有机器均可访问，进行上传、下载服务</strong></p>
+<p><strong>2、S-S-R、v-p-n、http代理、dns。。。服务器，你懂的</strong></p>
+<p><strong>3、aria2、迅雷下载，将文件下载到路由器硬盘上</strong></p>
+<p><strong>5、Web服务器，集成了网站开发环境</strong></p>
+<p><strong>6、内网穿透，使用了Ngrok映射了ssh。后来由于同学的小程序需求，(教务系统限制外网访问and学校v-p-n崩了)，之后我在此路由器上使用了FRP反向代理，为其服务器提供内网访问、负载均衡什么的</strong></p>
+<p><strong>7、ssh、信道更改、ipv6、drcom拨号、广告屏蔽、linux脚本什么的你应该懂得吧</strong></p>
+<p>如下图</p>
+<p><del>配置：超频1.4GHz CPU+512M RAM+64M FLASH = 游戏上分无敌？？</del></p>
+<p><img src="/img/post/router/padavan.png" alt></p>
+
     </div>
+
+    <div class="article-footer">
+      <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/路由器/">#路由器</a></li></ul>
+    </div>
+
+    <div class="article-navs">
+      
+<nav class="card-container card-article-nav">
+  <div class="card-wrap">
+    
+      <div class="card-item img">
+        <article>
+          
+            <div class="card-cover" style="background-image: url(/img/vim.jpg)"></div>
+          
+          <a class="card-link article-nav-link" href="/2019/04/20/vim/"></a>
+          <div class="article-nav-caption">Newer</div>
+          <div class="article-nav-title">vim笔记</div>
+        </article>
+      </div>
+    
+    
+      <div class="card-item img">
+        <article>
+          
+            <div class="card-cover" style="background-image: url(/img/internet.jpg)"></div>
+          
+          <a class="card-link article-nav-link" href="/2018/11/12/2018-11-12-ipv6/"></a>
+          <div class="article-nav-caption">Older</div>
+          <div class="article-nav-title">GFW vs IPv6</div>
+        </article>
+      </div>
+    
   </div>
-</div>
+</nav>
 
-<!-- page container -->
+    </div>
+    
+    
+  <div id="comment-container" class="comment-container"></div>
 
-</section>
+  </article>
+</div></section>
 
     <!-- footer container -->
 <footer id="footer" class="footer">
@@ -210,6 +245,22 @@
 
   
   
+<!-- valine 评论 -->
+<script type="text/javascript" src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript">
+  new Valine({
+    el: "#comment-container",
+    appId: "W5DdeF4EsnWOQ9FYQFhN9b0b-gzGzoHsz",
+    appKey: "3KQoej9WviAEUhpcQTfSj6w3",
+    avatar: "mm",
+    placeholder: "随便说点什么叭～",
+    notify: false,
+    visitor: false,
+    pageSize: 10,
+  });
+</script>
+
 
 
 <!-- dplayer 视频 -->
