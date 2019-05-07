@@ -123,52 +123,39 @@
     
 
     <div class="article-entry">
-      <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>我的博客是用jekyll搭建的，这个由于我最先接触到别人的也是用jekyll来搭建的，先入为主，我也跟着用jekyll来搭建了，其实网络上还有一种是用Hexo来搭建的，我没试过这个工具，在此我就不写关于Hexo的教程了，以下为jekyll搭建静态博客教程。</p>
+      <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>此文较为古老，现已使用HEXO</p>
+<p>我的博客是用jekyll搭建的，这个由于我最先接触到别人的也是用jekyll来搭建的，先入为主，我也跟着用jekyll来搭建了，其实网络上还有一种是用Hexo来搭建的，我没试过这个工具，在此我就不写关于Hexo的教程了，以下为jekyll搭建静态博客教程。</p>
 <hr>
 <h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>在jekyll的官网上 <a href="http://jekyllrb.com/" target="_blank" rel="noopener">http://jekyllrb.com/</a> 其实已经说得比较明白了，我在这里还是简单的说一下吧。我用的是Windows系统。<br>主要环节有：安装Ruby，安装RubyGems，安装jekyll，安装代码高亮插件，安装node.js</p>
 <h4 id="安装Ruby"><a href="#安装Ruby" class="headerlink" title="安装Ruby"></a>安装Ruby</h4><p>ruby官网下载安装：<a href="https://www.ruby-lang.org/en/downloads/" target="_blank" rel="noopener">https://www.ruby-lang.org/en/downloads/</a></p>
 <p><em>注意：高版本可能有好多问题，建议安装如下版本并安装相应的Devkit</em></p>
-<blockquote>
-<p>ruby 2.2.6p396 (2016-11-15 revision 56800) [x64-mingw32]</p>
-</blockquote>
+<p><code>ruby 2.2.6p396 (2016-11-15 revision 56800) [x64-mingw32]</code></p>
 <p>在cmd或者powershell中，输入一下命令</p>
-<blockquote>
-<p>ruby -v</p>
-</blockquote>
+<p><code>ruby -v</code></p>
 <p>若能够得到ruby版本号，即安装成功<br>如果不行则在系统变量中自行添加ruby的bin路径即可</p>
 <h4 id="安装RubyGems"><a href="#安装RubyGems" class="headerlink" title="安装RubyGems"></a>安装RubyGems</h4><p>官网下载 <a href="http://rubygems.org/pages/download" target="_blank" rel="noopener">http://rubygems.org/pages/download</a> rubygems.zip<br>解压后cd到RubyGems目录<br>或者在RubyGems目录下按住shift键+鼠标右键即可在菜单中出现powershell选项<br>执行安装   </p>
 <p><img src="http://ww1.sinaimg.cn/large/7011d6cfjw1f2ue1w8eqnj20bx00hglg.jpg" alt>  </p>
 <h4 id="用RubyGems安装Jekyll"><a href="#用RubyGems安装Jekyll" class="headerlink" title="用RubyGems安装Jekyll"></a>用RubyGems安装Jekyll</h4><p>执行下面的语句安装   </p>
-<blockquote>
-<p>gem install jekyll</p>
-</blockquote>
+<p><code>gem install jekyll</code></p>
 <p>至此jekyll就已经安装完毕了，后续就是个性化的自己设定了。</p>
 <h4 id="创建博客"><a href="#创建博客" class="headerlink" title="创建博客"></a>创建博客</h4><p>在d盘新建一个工作区jekyllWorkspace</p>
 <p>cd到jekyllWorkspace   </p>
 <p>执行jekyll new name创建新的工作区   </p>
 <p><img src="http://ww3.sinaimg.cn/large/7011d6cfjw1f2ue3lt31nj20cj02nt8u.jpg" alt></p>
 <p>cd到博客文件夹，开启服务器   </p>
-<blockquote>
-<p>jekyll serve</p>
-</blockquote>
-<blockquote>
+<p><code>jekyll serve</code></p>
 <p>如果命令运行出错，改用  bundle exec jekyll serve</p>
-</blockquote>
 <p>tips：</p>
-<blockquote>
-<ul>
-<li>可以直接到<a href="http://jekyllthemes.org/" target="_blank" rel="noopener">jekyllthemes</a>的网站上下载自己喜欢的博客模板</li>
-</ul>
-</blockquote>
+<p>可以直接到<a href="http://jekyllthemes.org/" target="_blank" rel="noopener">jekyllthemes</a>的网站上下载自己喜欢的博客模板</p>
 <h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><hr>
-<ul>
+<ol>
 <li>整个安装过程参考了jekyll官网，注意jekyll还有一个简体中文官网，有些内容没有翻译过来，有可能会走弯路，建议如果想看中文的相关资料，也要中英对照着阅读。<a href="http://jekyllcn.com" target="_blank" rel="noopener">jekyll中文网 http://jekyllcn.com</a>, <a href="http://jekyllrb.com" target="_blank" rel="noopener">jekyll英文网 http://jekyllrb.com</a></li>
 <li>jekyll中的css是用sass写的，当然直接在<code>_sass/_layout.scss</code>中添加css也是可以的。</li>
 <li>本文是用Markdown格式来写的，相关语法可参考： <a href="http://wowubuntu.com/markdown/" target="_blank" rel="noopener">Markdown 语法说明 (简体中文版) http://wowubuntu.com/markdown/</a>  </li>
 <li>按照本文的说明搭建完博客后，用<code>github Pages</code>托管就可以看到了。</li>
 <li>博客默认是没有评论系统的，详细安装办法可访问<a href="http://duoshuo.com/" target="_blank" rel="noopener">多说官网 http://duoshuo.com/</a>，当然也可以使用<a href="http://changyan.sohu.com/" target="_blank" rel="noopener">搜狐畅言 http://changyan.sohu.com/</a>作为评论系统。</li>
 <li>博客网站可以绑定自己的域名，如果没有域名，可到阿里云等提供域名购买的地方自行购买。</li>
-</ul>
+</ol>
 <hr>
 
     </div>

@@ -125,217 +125,101 @@
     <div class="article-entry">
       <h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>　　Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。<br>Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。。假如现在你有一个文件夹，里面可以是项目，也可以是你的学习资料，或者是你的简历、毕业设计等等，都可以使用git来管理。       </p>
 <h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p><strong>在Windows上安装Git</strong>      </p>
-<blockquote>
-<p>从<a href="https://git-for-windows.github.io" target="_blank" rel="noopener">https://git-for-windows.github.io</a> 下载，傻瓜式安装，安装完成之后鼠标右键菜单中有Git GUI here和Git bash here，表示安装完成！</p>
-</blockquote>
+<p> 从<a href="https://git-for-windows.github.io" target="_blank" rel="noopener">https://git-for-windows.github.io</a> 下载，傻瓜式安装，安装完成之后鼠标右键菜单中有Git GUI here和Git bash here，表示安装完成！</p>
 <p><strong>在Mac OS X上安装Git</strong>      </p>
 <p>提供两种方法参考：      </p>
-<blockquote>
-<p>1、通过homebrew安装Git，具体方法请参考<a href="http://brew.sh/" target="_blank" rel="noopener">homebrew的文档</a><br>2、直接从AppStore安装Xcode，Xcode集成了Git，不过默认没有安装，你需要运行Xcode。    </p>
-</blockquote>
+<p> 1、通过homebrew安装Git，具体方法请参考<a href="http://brew.sh/" target="_blank" rel="noopener">homebrew的文档</a><br> 2、直接从AppStore安装Xcode，Xcode集成了Git，不过默认没有安装，你需要运行Xcode。    </p>
 <h3 id="配置Git"><a href="#配置Git" class="headerlink" title="配置Git"></a>配置Git</h3><p>安装完成后，还需要最后一步设置，在命令行输入：</p>
-<blockquote>
 <ul>
 <li>$ git config –global user.name “Your Name”</li>
 <li>$ git config –global user.email “<a href="mailto:email@example.com" target="_blank" rel="noopener">email@example.com</a>“</li>
 </ul>
-</blockquote>
 <p>“Your Name”： 是每次提交时所显示的用户名，因为Git是分布式版本控制系统，当我们push到远端时，就需要区分每个提交记录具体是谁提交的，这个”Your Name”就是最好的区分。          </p>
 <p>“<a href="mailto:email@example.com" target="_blank" rel="noopener">email@example.com</a>“： 是你远端仓库的email       </p>
 <p>–global：用了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然我们也可以对某个仓库指定不同的用户名和Email地址。</p>
 <p>配置好的信息可使用下面的命令来查看</p>
-<blockquote>
 <ul>
 <li>$ git config –list        </li>
 </ul>
-</blockquote>
 <h3 id="开始使用-建立仓库："><a href="#开始使用-建立仓库：" class="headerlink" title="开始使用-建立仓库："></a>开始使用-建立仓库：</h3><p>你在目标文件夹下使命令：    </p>
-<blockquote>
 <p>$ git init  （创建.git文件）      </p>
-</blockquote>
 <p>就会创建一个 <code>.git</code> 隐藏文件，相当于已经建立了一个本地仓库。</p>
 <p><strong>添加文件</strong>  </p>
-<blockquote>
-<p>$ git add <file> //添加文件到暂存区</file></p>
-</blockquote>
-<blockquote>
+<p>$ git add &lt;file //添加文件到暂存区</p>
 <p>$ git add . //添加所有新文件和编辑过的文件，但不包括删除的文件</p>
-</blockquote>
-<blockquote>
 <p>$ git add -u //添加编辑或删除的文件，不包括新添加文件</p>
-</blockquote>
-<blockquote>
 <p>$ git add -A . //添加所有改变的文件</p>
-</blockquote>
-<blockquote>
 <p>$ git add -A //添加所有内容</p>
-</blockquote>
-<blockquote>
 <p>$ git commit -m “describe” //提交文件到仓库</p>
-</blockquote>
 <p> <strong>版本管理</strong>   </p>
-<blockquote>
 <p>$ git status //查看仓库当前状态</p>
-</blockquote>
-<blockquote>
-<p>$ git diff <file> //查看文件修改内容</file></p>
-</blockquote>
+<p>$ git diff &lt;file //查看文件修改内容</p>
 <p> <strong>版本退回</strong>   </p>
-<blockquote>
 <p>$ git reset –hard HEAD //返回当前版本</p>
-</blockquote>
-<blockquote>
 <p>$ git reset –hard HEAD^ //返回上个版本</p>
-</blockquote>
-<blockquote>
 <p>$ git reset –hard HEAD~100 //返回上100个版本</p>
-</blockquote>
-<blockquote>
 <p>$ git reset –hard commit_id //返回对应commit_id版本</p>
-</blockquote>
-<blockquote>
 <p>$ git log //查看提交历史，以便确定要回退到哪个版本</p>
-</blockquote>
-<blockquote>
 <p>$ git reflog //关闭终端后，查看提交历史，以便确定要回退到哪个版本</p>
-</blockquote>
 <p> <strong>撤销更改</strong></p>
-<blockquote>
 <p>$ git checkout – file //撤销工作区的修改</p>
-</blockquote>
-<blockquote>
 <p>$ git reset HEAD file //撤销暂存区的修改,后用上面命令丢弃修改</p>
-</blockquote>
 <p> <strong>删除文件</strong></p>
-<blockquote>
-<p>$ git rm <file> //删除一个文件，误删情况下可用 git checkout –file 恢复文件<br>远程仓库</file></p>
-</blockquote>
+<p>$ git rm &lt;file //删除一个文件，误删情况下可用 git checkout –file 恢复文件<br>远程仓库</p>
 <p> <strong>添加远程仓库</strong></p>
-<blockquote>
 <p>$ git remote add origin git@server-name:path/repo-name.git //关联远程库</p>
-</blockquote>
-<blockquote>
 <p>$ git push -u origin master //第一次推送master分支的所有内容</p>
-</blockquote>
-<blockquote>
 <p>$ git push origin master //之后推送master分支的最新修改</p>
-</blockquote>
-<blockquote>
 <p>$ git remote //查看远程库信息，添加 -v 显示详细信息</p>
-</blockquote>
 <p> <strong>从远程仓库克隆</strong></p>
-<blockquote>
 <p>$ git clone <a href="https://github.com/yourname/repo-name.git" target="_blank" rel="noopener">https://github.com/yourname/repo-name.git</a> //克隆远程库</p>
-</blockquote>
 <p><strong>分支管理</strong></p>
-<blockquote>
-<p><strong>创建与合并</strong></p>
-</blockquote>
-<blockquote>
+<p> <strong>创建与合并</strong></p>
 <p>$ git branch //查看分支</p>
-</blockquote>
-<blockquote>
-<p>$ git branch <name> //创建分支</name></p>
-</blockquote>
-<blockquote>
-<p>$ git checkout <name> //切换分支</name></p>
-</blockquote>
-<blockquote>
-<p>$ git checkout -b <name> //创建并切换分支</name></p>
-</blockquote>
-<blockquote>
-<p>$ git merge <name> //合并某分支到当前分支</name></p>
-</blockquote>
-<blockquote>
+<p>$ git branch &lt;name //创建分支</p>
+<p>$ git checkout &lt;name //切换分支</p>
+<p>$ git checkout -b &lt;name //创建并切换分支</p>
+<p>$ git merge &lt;name //合并某分支到当前分支</p>
 <p>$ git log –graph //查看分支合并图</p>
-</blockquote>
-<blockquote>
-<p>$ git branch -d <name> //删除分支</name></p>
-</blockquote>
-<blockquote>
-<p>$ git branch -D <name> //强行删除</name></p>
-</blockquote>
-<blockquote>
-<p>$ git merge –on-ff -m “describe” <name> //普通模式合并，合并后历史有分支，可以使用 git log 命令查看</name></p>
-</blockquote>
+<p>$ git branch -d &lt;name //删除分支</p>
+<p>$ git branch -D &lt;name //强行删除</p>
+<p>$ git merge –on-ff -m “describe” &lt;name //普通模式合并，合并后历史有分支，可以使用 git log 命令查看</p>
 <p> <strong>工作区存储</strong></p>
 <p>当临时bug或者任务需要切换至其他分支进行工作时，可先存储当前工作现场，切换至其他分支完成工作后，返回分支恢复现场继续工作。</p>
-<blockquote>
 <p>$ git stash //“储藏”当前工作现场</p>
-</blockquote>
-<blockquote>
 <p>$ git stash list //查看“储藏”的工作现场</p>
-</blockquote>
-<blockquote>
 <p>$ git stash apply //恢复，但不删除stash内容</p>
-</blockquote>
-<blockquote>
 <p>$ git stash drop //删除stash内容</p>
-</blockquote>
-<blockquote>
 <p>$ git stash pop //恢复同时删除stash内容</p>
-</blockquote>
 <p><strong>标签管理</strong></p>
 <p><strong>创建标签</strong></p>
-<blockquote>
-<p>$ git tag <tagname> //创建标签</tagname></p>
-</blockquote>
-<blockquote>
-<p>$ git tag <tagname> commit_id //在对应的历史提交上，创建标签</tagname></p>
-</blockquote>
-<blockquote>
-<p>$ git tag -a <tagname> -m “describe” commit_id //在对应的历史提交上，创建带有说明的标签</tagname></p>
-</blockquote>
-<blockquote>
+<p>$ git tag &lt;tagname //创建标签</p>
+<p>$ git tag &lt;tagname commit_id //在对应的历史提交上，创建标签</p>
+<p>$ git tag -a &lt;tagname -m “describe” commit_id //在对应的历史提交上，创建带有说明的标签</p>
 <p>$ git tag //查看所有标签</p>
-</blockquote>
-<blockquote>
-<p>$ git show <tagname> //查看标签信息<br>操作标签</tagname></p>
-</blockquote>
-<blockquote>
-<p>$ git tag -d <tagname> //删除本地标签</tagname></p>
-</blockquote>
-<blockquote>
-<p>$ git push origin <tagname> //推送某个标签到远程库</tagname></p>
-</blockquote>
-<blockquote>
+<p>$ git show &lt;tagname //查看标签信息<br>操作标签</p>
+<p>$ git tag -d &lt;tagname //删除本地标签</p>
+<p>$ git push origin &lt;tagname //推送某个标签到远程库</p>
 <p>$ git push origin –tags //推送所有未推送的标签到远程库</p>
-</blockquote>
-<blockquote>
-<p>$ git push origin :refs/tags/<tagname> //删除一个远程标签，前提需要先删除本地标签<br>自定义Git</tagname></p>
-</blockquote>
+<p>$ git push origin :refs/tags/&lt;tagname //删除一个远程标签，前提需要先删除本地标签<br>自定义Git</p>
 <p>例如：</p>
-<blockquote>
 <p>$ git config –global color.ui true //使Git适当地显示不同的颜色<br>配置别名</p>
-</blockquote>
 <p>别名配置例子：</p>
-<blockquote>
 <p>$ git config –global alias.st status //用st替换status</p>
-</blockquote>
-<blockquote>
 <p>$ git config –global alias.co checkout</p>
-</blockquote>
-<blockquote>
 <p>$ git config –global alias.br branch</p>
-</blockquote>
-<blockquote>
 <p>$ git config –global alias.last log -1 //最后一次提交log</p>
-</blockquote>
-<blockquote>
 <p>$ git config –global alias.unstage ‘reset HEAD’ //把暂存区的修改撤销掉（unstage），重新放回工作区</p>
-</blockquote>
 <p>配置Git的时候，加上–global是针对当前用户起作用的，如果不加，那只针对当前的仓库起作用。而当前用户的Git配置文件放在用户主目录下的一个隐藏文件.gitconfig中：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ cat .gitconfig</span><br><span class="line">    [alias]</span><br><span class="line">        co = checkout</span><br><span class="line">        ci = commit</span><br><span class="line">        br = branch</span><br><span class="line">        st = status</span><br><span class="line">    [user]</span><br><span class="line">        name = Your Name</span><br><span class="line">        email = your@email.com</span><br></pre></td></tr></table></figure>
 <p>别名就在[alias]后面，要删除别名，直接把对应的行删掉即可。</p>
 <p>每个仓库的Git配置文件都放在.git/config文件中，:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">cat .git/config</span><br><span class="line">[core]</span><br><span class="line">        repositoryformatversion = 0</span><br><span class="line">        filemode = false</span><br><span class="line">        bare = false</span><br><span class="line">        logallrefupdates = true</span><br><span class="line">        symlinks = false</span><br><span class="line">        ignorecase = true</span><br><span class="line">[submodule]</span><br><span class="line">        active = .</span><br><span class="line">[remote &quot;origin&quot;]</span><br><span class="line">        url = https://github.com/kailanguage/kailanguage.github.io.git</span><br><span class="line">        fetch = +refs/heads/*:refs/remotes/origin/*</span><br><span class="line">[branch &quot;master&quot;]</span><br><span class="line">        remote = origin</span><br><span class="line">        merge = refs/heads/master</span><br></pre></td></tr></table></figure></p>
 <h3 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h3><p>如果你觉得Git命令不好操作，你可以选择人性化的交互的<a href="https://desktop.github.com/" target="_blank" rel="noopener">Github desktop</a></p>
-<blockquote>
 <ul>
 <li>Github for Windows会帮你创建SSH Key，你打开邮件应该会收到邮件帮你创建SSH Key的信息</li>
 <li>相关操作可自行摸索</li>
 </ul>
-</blockquote>
-<h2 id><a href="#" class="headerlink" title></a><br></h2>
+<h2 id="lt-br"><a href="#lt-br" class="headerlink" title="&lt;br"></a>&lt;br</h2>
     </div>
 
     <div class="article-footer">
