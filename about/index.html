@@ -130,6 +130,8 @@
     </div>
     
     
+  <div id="comment-container" class="comment-container"></div>
+
   </article>
 </div></section>
 
@@ -199,6 +201,22 @@
 
   
   
+<!-- valine 评论 -->
+<script type="text/javascript" src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript">
+  new Valine({
+    el: "#comment-container",
+    appId: "W5DdeF4EsnWOQ9FYQFhN9b0b-gzGzoHsz",
+    appKey: "3KQoej9WviAEUhpcQTfSj6w3",
+    avatar: "mm",
+    placeholder: "随便说点什么叭～",
+    notify: false,
+    visitor: false,
+    pageSize: 10,
+  });
+</script>
+
 
 
 <!-- dplayer 视频 -->
