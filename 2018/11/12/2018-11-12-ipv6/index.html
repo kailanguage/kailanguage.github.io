@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -123,10 +123,13 @@
     
 
     <div class="article-entry">
-      <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>GFW（great fire wall）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">主要技术</span><br><span class="line">1 域名解析服务缓存污染</span><br><span class="line">2 针对境外的IP地址封锁</span><br><span class="line">3 IP地址特定端口封锁</span><br><span class="line">4 无状态TCP连接重置</span><br><span class="line">5 对加密连接的干扰</span><br><span class="line">6 TCP关键字阻断</span><br><span class="line">7 CA证书检测</span><br><span class="line">8 对破网软件的反制</span><br><span class="line">9 间歇性完全封锁</span><br><span class="line">    9.1   间歇性封锁国际出口</span><br><span class="line">    9.2   境内骨干路由器间歇性阻断</span><br><span class="line">10    深度包检测</span><br><span class="line">11    针对IPv6协议的审查</span><br><span class="line">12    对电子邮件通讯的拦截</span><br></pre></td></tr></table></figure></p>
+      <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>GFW（great fire wall）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">主要技术</span><br><span class="line">1 域名解析服务缓存污染</span><br><span class="line">2 针对境外的IP地址封锁</span><br><span class="line">3 IP地址特定端口封锁</span><br><span class="line">4 无状态TCP连接重置</span><br><span class="line">5 对加密连接的干扰</span><br><span class="line">6 TCP关键字阻断</span><br><span class="line">7 CA证书检测</span><br><span class="line">8 对破网软件的反制</span><br><span class="line">9 间歇性完全封锁</span><br><span class="line">    9.1   间歇性封锁国际出口</span><br><span class="line">    9.2   境内骨干路由器间歇性阻断</span><br><span class="line">10    深度包检测</span><br><span class="line">11    针对IPv6协议的审查</span><br><span class="line">12    对电子邮件通讯的拦截</span><br></pre></td></tr></table></figure>
+
 <p>了解更多请移步维基百科<br><br><br>IPv6:下一代ip协议。<br>在学校里有幸使用到了教育网提供的IPv6和IPv4共存的网络服务。<br>fe80::开头的是链路本地地址</p>
 <p>2001::教育网开头</p>
-<p><br></p>
+<br>
+
 <p>最近，我在对我本地的网站进行IPv6的适配，好吧，IPv6挺让人失望的.我认为可以跳出局域网的局限性，使用IPv6可以定位到个人的电脑，就像拥有一个独立的私有的互联网上可访问的IPv4地址一样，结果不尽人意。</p>
 <p>有可能是出口BGP的限制，或者链路上的某路由器把目标数据包丢弃了。使用某网站进行ip查询，是可以定位到学校的，然后进行了ping测试，结果掉包100%</p>
 <hr>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -124,6 +124,7 @@
 
     <div class="article-entry">
       <h3 id="四舍五入-amp-Date-format"><a href="#四舍五入-amp-Date-format" class="headerlink" title="四舍五入&amp;Date format"></a>四舍五入&amp;Date format</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">            //①</span><br><span class="line">          DecimalFormat df = new DecimalFormat(&quot;#.00&quot;);</span><br><span class="line">          String s1 = df.format(3.1465926);</span><br><span class="line">          //②</span><br><span class="line">          String s2 = String.format(&quot;%.2f&quot;,3.1415926);</span><br><span class="line">          //③</span><br><span class="line">          Math.round(-12.5);//-12</span><br><span class="line">          Math.round(12.5);//13</span><br><span class="line"></span><br><span class="line">          //Date</span><br><span class="line">          //yyyy:year MM:month</span><br><span class="line">          //EEEE-week dd:day</span><br><span class="line">          //HH:hour mm:minute ss:second</span><br><span class="line">          SimpleDateFormat date = new SimpleDateFormat(&quot;yyyy-MM-dd-HH:mm:ss&quot;);</span><br><span class="line">          date.format(dateCreated);</span><br><span class="line">		  //c-printf</span><br><span class="line">		  System.out.format(&quot;%4d&quot;,number);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
 
     </div>
 
